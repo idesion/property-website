@@ -65,7 +65,9 @@ const Seller = () => {
   const overallStats = {
     totalTransactions: "51,700+",
     totalValue: "$15.5B",
-    averageGrowth: "+13%"
+    averageGrowth: "+13%",
+    totalAgencies: "130+",
+    totalAgents: "20,000+"
   };
 
   const agencyStats = [
@@ -168,20 +170,26 @@ const Seller = () => {
         </div>
 
         {/* Overall Stats */}
-        <div className="bg-white p-8 rounded-2xl shadow-sm mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h4 className="text-2xl font-bold text-primary mb-2">{overallStats.totalTransactions}</h4>
-              <p className="text-gray-600">Total Transactions</p>
-            </div>
-            <div className="text-center">
-              <h4 className="text-2xl font-bold text-primary mb-2">{overallStats.totalValue}</h4>
-              <p className="text-gray-600">Total Value</p>
-            </div>
-            <div className="text-center">
-              <h4 className="text-2xl font-bold text-green-500 mb-2">{overallStats.averageGrowth}</h4>
-              <p className="text-gray-600">Average YoY Growth</p>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+          <div className="text-center">
+            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalTransactions}</h4>
+            <p className="text-gray-600">Transactions</p>
+          </div>
+          <div className="text-center">
+            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalValue}</h4>
+            <p className="text-gray-600">Total Value</p>
+          </div>
+          <div className="text-center">
+            <h4 className="text-4xl font-bold text-green-500 mb-2">{overallStats.averageGrowth}</h4>
+            <p className="text-gray-600">YoY Growth</p>
+          </div>
+          <div className="text-center">
+            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalAgencies}</h4>
+            <p className="text-gray-600">Agencies</p>
+          </div>
+          <div className="text-center">
+            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalAgents}</h4>
+            <p className="text-gray-600">Agents</p>
           </div>
         </div>
 
@@ -195,12 +203,6 @@ const Seller = () => {
               className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all"
             />
           ))}
-        </div>
-
-        <div className="bg-primary/10 mt-12 p-6 rounded-2xl text-center">
-          <p className="text-gray-700 font-semibold">
-            Join our network of over 20,000 verified agents across the country
-          </p>
         </div>
       </div>
 
