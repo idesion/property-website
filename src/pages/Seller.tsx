@@ -114,15 +114,15 @@ const Seller = () => {
     <div className="min-h-screen bg-[#F0F4F4]">
       {/* Hero Section */}
       <div 
-        className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat"
+        className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-12 px-4 before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat"
         style={{
           backgroundImage: "url('/lovable-uploads/003f7c21-efa5-413f-af8c-5df7049d9059.png')",
         }}
       >
-        <div className="container mx-auto text-left max-w-4xl relative z-10">
+        <div className="container mx-auto text-left max-w-4xl relative z-10 pl-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#222222]">List Your Property</h1>
           <p className="text-xl mb-8 text-[#222222]">Get an instant AI-powered valuation and connect with thousands of verified agents</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
               <Clock className="w-12 h-12 mb-4 text-[#222222]" strokeWidth={1.5} />
               <h3 className="font-bold text-xl mb-2 text-[#222222]">Instant Valuation</h3>
