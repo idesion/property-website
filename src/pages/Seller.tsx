@@ -150,15 +150,17 @@ const Seller = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <div className="absolute top-4 left-4">
+                    <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center pt-8">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                       {React.createElement(step.icon, {
-                        className: "w-8 h-8 text-primary",
+                        className: "w-12 h-12 text-primary",
                         strokeWidth: 1.5
                       })}
-                    </div>
-                    <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 text-xl font-bold">
-                      {index + 1}
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
                     <p className="text-gray-600 text-center">{step.description}</p>
