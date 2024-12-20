@@ -1,4 +1,4 @@
-import { Users, Clock, Shield, Star } from "lucide-react";
+import { Users, Clock, Shield, Star, ClipboardList, Users2, Calendar, HandshakeIcon } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PropertyDetailsForm from "@/components/PropertyDetailsForm";
 
@@ -7,18 +7,22 @@ const Seller = () => {
     {
       title: "List Your Property",
       description: "Fill in your property details and get an instant AI valuation",
+      icon: ClipboardList,
     },
     {
       title: "Connect with Agents",
       description: "Get matched with top-performing agents in your area",
+      icon: Users2,
     },
     {
       title: "Manage Viewings",
       description: "Schedule and track all property viewings through our platform",
+      icon: Calendar,
     },
     {
       title: "Close the Deal",
       description: "Receive and negotiate offers securely through our system",
+      icon: HandshakeIcon,
     },
   ];
 
@@ -145,11 +149,19 @@ const Seller = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 text-xl font-bold">
-                    {index + 1}
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                      {React.createElement(step.icon, {
+                        className: "w-8 h-8 text-primary",
+                        strokeWidth: 1.5
+                      })}
+                    </div>
+                    <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 text-xl font-bold">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
+                    <p className="text-gray-600 text-center">{step.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 right-0 w-full h-0.5 bg-primary/20 -z-10 transform translate-x-1/2" />
