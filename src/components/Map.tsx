@@ -7,7 +7,7 @@ import { Button } from './ui/button';
 const Map = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(() => localStorage.getItem('mapbox_token') || '');
   const [isMapInitialized, setIsMapInitialized] = useState(false);
 
   const initializeMap = () => {
@@ -15,6 +15,7 @@ const Map = () => {
 
     // Initialize map
     mapboxgl.accessToken = token;
+    localStorage.setItem('mapbox_token', token);
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -28,6 +29,9 @@ const Map = () => {
   };
 
   useEffect(() => {
+    if (token) {
+      initializeMap();
+    }
     return () => {
       map.current?.remove();
     };
