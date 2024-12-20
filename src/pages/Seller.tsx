@@ -84,6 +84,22 @@ const Seller = () => {
     {
       name: "Keller Williams",
       logo: "/placeholder.svg",
+    },
+    {
+      name: "Sotheby's",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Berkshire Hathaway",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "eXp Realty",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Compass",
+      logo: "/placeholder.svg",
     }
   ];
 
@@ -170,18 +186,14 @@ const Seller = () => {
         </div>
 
         {/* Agency Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center items-center gap-8">
           {agencyStats.map((agency, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
-              <div className="flex flex-col items-center">
-                <img 
-                  src={agency.logo} 
-                  alt={`${agency.name} logo`} 
-                  className="w-32 h-32 object-contain mb-4"
-                />
-                <h3 className="text-xl font-semibold text-center">{agency.name}</h3>
-              </div>
-            </div>
+            <img 
+              key={index}
+              src={agency.logo} 
+              alt={`${agency.name} logo`} 
+              className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all"
+            />
           ))}
         </div>
 
