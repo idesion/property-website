@@ -62,34 +62,28 @@ const Seller = () => {
     },
   ];
 
+  const overallStats = {
+    totalTransactions: "51,700+",
+    totalValue: "$15.5B",
+    averageGrowth: "+13%"
+  };
+
   const agencyStats = [
     {
       name: "Century 21",
       logo: "/placeholder.svg",
-      transactions: "15,000+",
-      value: "$4.2B",
-      growth: "+12%"
     },
     {
       name: "RE/MAX",
       logo: "/placeholder.svg",
-      transactions: "12,500+",
-      value: "$3.8B",
-      growth: "+15%"
     },
     {
       name: "Coldwell Banker",
       logo: "/placeholder.svg",
-      transactions: "11,000+",
-      value: "$3.5B",
-      growth: "+10%"
     },
     {
       name: "Keller Williams",
       logo: "/placeholder.svg",
-      transactions: "13,200+",
-      value: "$4.0B",
-      growth: "+14%"
     }
   ];
 
@@ -148,7 +142,7 @@ const Seller = () => {
         </div>
       </div>
 
-      {/* Agency Network Section - Replaced Map with Agency Grid */}
+      {/* Agency Network Section */}
       <div className="container mx-auto py-20 px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Agent Network</h2>
@@ -156,36 +150,43 @@ const Seller = () => {
             Partner with the most successful real estate agencies in the country
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        {/* Overall Stats */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-primary mb-2">{overallStats.totalTransactions}</h4>
+              <p className="text-gray-600">Total Transactions</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-primary mb-2">{overallStats.totalValue}</h4>
+              <p className="text-gray-600">Total Value</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-green-500 mb-2">{overallStats.averageGrowth}</h4>
+              <p className="text-gray-600">Average YoY Growth</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Agency Logos */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {agencyStats.map((agency, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
-              <div className="flex flex-col items-center space-y-4">
+            <div key={index} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="flex flex-col items-center">
                 <img 
                   src={agency.logo} 
                   alt={`${agency.name} logo`} 
                   className="w-32 h-32 object-contain mb-4"
                 />
                 <h3 className="text-xl font-semibold text-center">{agency.name}</h3>
-                <div className="w-full space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Transactions</span>
-                    <span className="font-semibold">{agency.transactions}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Total Value</span>
-                    <span className="font-semibold">{agency.value}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">YoY Growth</span>
-                    <span className="font-semibold text-green-500">{agency.growth}</span>
-                  </div>
-                </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <p className="text-gray-600">
+
+        <div className="bg-primary/10 mt-12 p-6 rounded-2xl text-center">
+          <p className="text-gray-700 font-semibold">
             Join our network of over 20,000 verified agents across the country
           </p>
         </div>
