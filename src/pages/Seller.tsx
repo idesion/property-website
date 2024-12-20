@@ -1,49 +1,9 @@
-import { useState } from "react";
-import { Building2, MapPin, Ruler, BedDouble, Bath, DollarSign, Calendar, Shield, Users, Clock, Star } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { Users, Clock, Shield, Star } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Map from "@/components/Map";
+import PropertyDetailsForm from "@/components/PropertyDetailsForm";
 
 const Seller = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    propertyType: "",
-    location: "",
-    squareFeet: "",
-    bedrooms: "",
-    bathrooms: "",
-    price: "",
-    yearBuilt: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Valuation Request Received",
-      description: "We'll analyze your property details and send you an estimate shortly.",
-    });
-  };
-
-  const benefits = [
-    {
-      title: "List Once, Reach Thousands",
-      description: "Instant access to our network of 20,000+ verified real estate agents",
-      icon: Users,
-    },
-    {
-      title: "Accelerated Sales",
-      description: "Accelerate your property sale through our extensive agent network",
-      icon: Clock,
-    },
-    {
-      title: "Enhanced Privacy",
-      description: "All viewing requests managed through our secure platform",
-      icon: Shield,
-    },
-  ];
-
   const steps = [
     {
       title: "List Your Property",
@@ -127,21 +87,9 @@ const Seller = () => {
         </div>
       </div>
 
-      {/* Benefits Section */}
-      <div className="container mx-auto py-20 px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Why Sell With Us?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Join thousands of successful sellers who've trusted our platform</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-              <benefit.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
+      {/* Property Form Section */}
+      <div className="container mx-auto py-12 px-4">
+        <PropertyDetailsForm />
       </div>
 
       {/* How It Works Section */}
@@ -224,112 +172,6 @@ const Seller = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </div>
-
-      {/* Property Form Section */}
-      <div className="container mx-auto py-12 px-4">
-        <div className="max-w-2xl mx-auto form-container">
-          <h2 className="text-2xl font-bold mb-6">Property Details</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium mb-2">Property Type</label>
-                <div className="input-group">
-                  <Building2 className="input-icon" size={20} />
-                  <Input
-                    placeholder="e.g., Apartment, House, Villa"
-                    value={formData.propertyType}
-                    onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Location</label>
-                <div className="input-group">
-                  <MapPin className="input-icon" size={20} />
-                  <Input
-                    placeholder="Enter address"
-                    value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Square Feet</label>
-                <div className="input-group">
-                  <Ruler className="input-icon" size={20} />
-                  <Input
-                    type="number"
-                    placeholder="Total area"
-                    value={formData.squareFeet}
-                    onChange={(e) => setFormData({ ...formData, squareFeet: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Price</label>
-                <div className="input-group">
-                  <DollarSign className="input-icon" size={20} />
-                  <Input
-                    type="number"
-                    placeholder="Expected price"
-                    value={formData.price}
-                    onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Bedrooms</label>
-                <div className="input-group">
-                  <BedDouble className="input-icon" size={20} />
-                  <Input
-                    type="number"
-                    placeholder="Number of bedrooms"
-                    value={formData.bedrooms}
-                    onChange={(e) => setFormData({ ...formData, bedrooms: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Bathrooms</label>
-                <div className="input-group">
-                  <Bath className="input-icon" size={20} />
-                  <Input
-                    type="number"
-                    placeholder="Number of bathrooms"
-                    value={formData.bathrooms}
-                    onChange={(e) => setFormData({ ...formData, bathrooms: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Year Built</label>
-                <div className="input-group">
-                  <Calendar className="input-icon" size={20} />
-                  <Input
-                    type="number"
-                    placeholder="Construction year"
-                    value={formData.yearBuilt}
-                    onChange={(e) => setFormData({ ...formData, yearBuilt: e.target.value })}
-                    className="rounded-xl"
-                  />
-                </div>
-              </div>
-            </div>
-            <Button 
-              type="submit" 
-              className="w-full bg-primary hover:bg-primary-dark text-white rounded-xl py-6"
-            >
-              Get Instant Valuation
-            </Button>
-          </form>
         </div>
       </div>
     </div>
