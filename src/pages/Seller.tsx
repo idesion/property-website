@@ -1,6 +1,17 @@
 import React from "react";
-import { Users2, Calendar, HandshakeIcon, ClipboardList, Star } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Users2,
+  Calendar,
+  HandshakeIcon,
+  ClipboardList,
+  Star,
+} from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import PropertyDetailsForm from "@/components/PropertyDetailsForm";
 import SellerHero from "@/components/SellerHero";
 
@@ -8,7 +19,8 @@ const Seller = () => {
   const steps = [
     {
       title: "List Your Property",
-      description: "Fill in your property details and get an instant AI valuation",
+      description:
+        "Fill in your property details and get an instant AI valuation",
       icon: ClipboardList,
     },
     {
@@ -18,7 +30,8 @@ const Seller = () => {
     },
     {
       title: "Manage Viewings",
-      description: "Schedule and track all property viewings through our platform",
+      description:
+        "Schedule and track all property viewings through our platform",
       icon: Calendar,
     },
     {
@@ -32,19 +45,22 @@ const Seller = () => {
     {
       name: "Sarah Johnson",
       role: "Property Seller",
-      content: "Sold my house in just 3 weeks! The AI valuation was spot-on and the agent matching was perfect.",
+      content:
+        "Sold my house in just 3 weeks! The AI valuation was spot-on and the agent matching was perfect.",
       rating: 5,
     },
     {
       name: "Michael Chen",
       role: "Property Seller",
-      content: "The privacy features are fantastic. No more spam calls, everything went through the platform.",
+      content:
+        "The privacy features are fantastic. No more spam calls, everything went through the platform.",
       rating: 5,
     },
     {
       name: "Emma Davis",
       role: "Property Seller",
-      content: "Very professional service. The instant valuation helped me price my property correctly from day one.",
+      content:
+        "Very professional service. The instant valuation helped me price my property correctly from day one.",
       rating: 4,
     },
   ];
@@ -52,28 +68,31 @@ const Seller = () => {
   const faqs = [
     {
       question: "How accurate is the AI valuation?",
-      answer: "Our AI valuation tool is trained on millions of property transactions and has a typical accuracy rate of 95% in most areas. However, we always recommend getting a professional agent's opinion as well.",
+      answer:
+        "Our AI valuation tool is trained on millions of property transactions and has a typical accuracy rate of 95% in most areas. However, we always recommend getting a professional agent's opinion as well.",
     },
     {
       question: "How do you verify real estate agents?",
-      answer: "All agents on our platform go through a rigorous verification process including license verification, background checks, and performance history review.",
+      answer:
+        "All agents on our platform go through a rigorous verification process including license verification, background checks, and performance history review.",
     },
     {
       question: "Are there any upfront fees?",
-      answer: "No, there are no upfront fees to list your property. We only charge a small commission when your property successfully sells.",
+      answer:
+        "No, there are no upfront fees to list your property. We only charge a small commission when your property successfully sells.",
     },
     {
       question: "How long does it typically take to sell a property?",
-      answer: "While selling times vary by market conditions and property type, our platform users typically sell 30% faster than the market average.",
+      answer:
+        "While selling times vary by market conditions and property type, our platform users typically sell 30% faster than the market average.",
     },
   ];
 
   const overallStats = {
     totalTransactions: "51,700+",
     totalValue: "$15.5B",
-    averageGrowth: "+13%",
     totalAgencies: "130+",
-    totalAgents: "20,000+"
+    totalAgents: "20,000+",
   };
 
   const agencyStats = [
@@ -108,13 +127,13 @@ const Seller = () => {
     {
       name: "Compass",
       logo: "/placeholder.svg",
-    }
+    },
   ];
 
   return (
     <div className="min-h-screen bg-[#F0F4F4]">
       <SellerHero />
-      
+
       {/* Property Form Section */}
       <div className="container mx-auto py-12 px-4">
         <PropertyDetailsForm />
@@ -125,7 +144,9 @@ const Seller = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">How It Works</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Simple steps to sell your property faster</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Simple steps to sell your property faster
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -140,11 +161,15 @@ const Seller = () => {
                     <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                       {React.createElement(step.icon, {
                         className: "w-12 h-12 text-primary",
-                        strokeWidth: 1.5
+                        strokeWidth: 1.5,
                       })}
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
-                    <p className="text-gray-600 text-center">{step.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-center">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-center">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
                 {index < steps.length - 1 && (
@@ -166,25 +191,29 @@ const Seller = () => {
         </div>
 
         {/* Overall Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalTransactions}</h4>
+            <h4 className="text-4xl font-bold text-primary mb-2">
+              {overallStats.totalTransactions}
+            </h4>
             <p className="text-gray-600">Transactions</p>
           </div>
           <div className="text-center">
-            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalValue}</h4>
+            <h4 className="text-4xl font-bold text-primary mb-2">
+              {overallStats.totalValue}
+            </h4>
             <p className="text-gray-600">Total Value</p>
           </div>
           <div className="text-center">
-            <h4 className="text-4xl font-bold text-green-500 mb-2">{overallStats.averageGrowth}</h4>
-            <p className="text-gray-600">YoY Growth</p>
-          </div>
-          <div className="text-center">
-            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalAgencies}</h4>
+            <h4 className="text-4xl font-bold text-primary mb-2">
+              {overallStats.totalAgencies}
+            </h4>
             <p className="text-gray-600">Agencies</p>
           </div>
           <div className="text-center">
-            <h4 className="text-4xl font-bold text-primary mb-2">{overallStats.totalAgents}</h4>
+            <h4 className="text-4xl font-bold text-primary mb-2">
+              {overallStats.totalAgents}
+            </h4>
             <p className="text-gray-600">Agents</p>
           </div>
         </div>
@@ -192,10 +221,10 @@ const Seller = () => {
         {/* Agency Logos */}
         <div className="flex flex-wrap justify-center items-center gap-8">
           {agencyStats.map((agency, index) => (
-            <img 
+            <img
               key={index}
-              src={agency.logo} 
-              alt={`${agency.name} logo`} 
+              src={agency.logo}
+              alt={`${agency.name} logo`}
               className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all"
             />
           ))}
@@ -207,14 +236,22 @@ const Seller = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Our Sellers Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Join thousands of satisfied sellers</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Join thousands of satisfied sellers
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              >
                 <div className="flex items-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">{review.content}</p>
@@ -231,14 +268,20 @@ const Seller = () => {
       {/* FAQ Section */}
       <div className="container mx-auto py-20 px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about selling with us</p>
+          <h2 className="text-3xl font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about selling with us
+          </p>
         </div>
         <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-8">
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                <AccordionTrigger className="text-left">
+                  {faq.question}
+                </AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
