@@ -35,7 +35,7 @@ const PropertyDetailsForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto form-container">
+    <div className="max-w-4xl mx-auto form-container">
       <h2 className="text-2xl font-bold mb-6">
         Enter your details and get instant estimate valuation
       </h2>
