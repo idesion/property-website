@@ -2,6 +2,7 @@ import SearchFilters from "@/components/SearchFilters";
 import PropertyCard from "@/components/PropertyCard";
 import Map from "@/components/Map";
 import BuyerHero from "@/components/BuyerHero";
+import BuyerHowItWorks from "@/components/BuyerHowItWorks";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
@@ -37,29 +38,6 @@ const SAMPLE_PROPERTIES = [
 ];
 
 const Buyer = () => {
-  const steps = [
-    {
-      title: "Search Properties",
-      description: "Browse through our verified listings with detailed filters",
-      number: 1,
-    },
-    {
-      title: "Schedule Viewings",
-      description: "Book appointments to visit your favorite properties",
-      number: 2,
-    },
-    {
-      title: "Make an Offer",
-      description: "Submit your offer directly through our platform",
-      number: 3,
-    },
-    {
-      title: "Close the Deal",
-      description: "Complete your purchase with our secure process",
-      number: 4,
-    },
-  ];
-
   const reviews = [
     {
       name: "Sarah Johnson",
@@ -121,78 +99,37 @@ const Buyer = () => {
         <Map />
       </div>
 
-      {/* How It Works Section */}
-      <div className="bg-accent/20 py-20 px-4 -mx-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How It Works</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Simple steps to find and buy your dream property
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="absolute top-4 left-4">
-                    <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center pt-8">
-                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                      <span className="text-4xl text-primary">
-                        {step.number}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-center">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 text-center">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 right-0 w-full h-0.5 bg-primary/20 -z-10 transform translate-x-1/2" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <BuyerHowItWorks />
 
-      {/* Buyer Reviews Section */}
+      {/* Reviews Section */}
       <div className="bg-secondary/20 py-20 px-4 -mx-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Our Buyers Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Join thousands of satisfied buyers
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">{review.content}</p>
-                <div>
-                  <p className="font-semibold">{review.name}</p>
-                  <p className="text-gray-500 text-sm">{review.role}</p>
-                </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">What Our Buyers Say</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Join thousands of satisfied buyers
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center mb-4">
+                {[...Array(review.rating)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-yellow-400 fill-current"
+                  />
+                ))}
               </div>
-            ))}
-          </div>
+              <p className="text-gray-600 mb-4">{review.content}</p>
+              <div>
+                <p className="font-semibold">{review.name}</p>
+                <p className="text-gray-500 text-sm">{review.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Building2, Shield, Bell } from "lucide-react";
+import { Building2, Shield, Scale } from "lucide-react";
 
 const BuyerHero = () => {
   return (
@@ -26,13 +26,13 @@ const BuyerHero = () => {
           </div>
           <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
             <Shield className="h-8 w-8 mb-4 mx-auto " />
-            <h3 className="font-bold text-xl mb-2 ">Secure Platform</h3>
-            <p className="">Safe and secure property search</p>
+            <h3 className="font-bold text-xl mb-2 ">1 Year Defect Warranty</h3>
+            <p className="">Comprehensive protection for your home</p>
           </div>
           <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-            <Bell className="h-8 w-8 mb-4 mx-auto " />
-            <h3 className="font-bold text-xl mb-2 ">Real-time Updates</h3>
-            <p className="">Get notified about new properties</p>
+            <Scale className="h-8 w-8 mb-4 mx-auto " />
+            <h3 className="font-bold text-xl mb-2 ">Free SPA Legal Fee</h3>
+            <p className="">No additional legal costs</p>
           </div>
         </div>
       </div>
