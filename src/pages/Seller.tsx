@@ -119,7 +119,7 @@ const Seller = () => {
           backgroundImage: "url('/lovable-uploads/003f7c21-efa5-413f-af8c-5df7049d9059.png')",
         }}
       >
-        <div className="container mx-auto text-left max-w-4xl relative z-10">
+        <div className="container mx-auto text-left max-w-4xl relative z-10 ml-[5px]">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#222222]">List Your Property</h1>
           <p className="text-xl mb-8 text-[#222222]">Get an instant AI-powered valuation and connect with thousands of verified agents</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
