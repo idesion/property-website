@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Search, HeadphonesIcon } from "lucide-react";
+import { Home, Search, Building2, UserCircle } from "lucide-react";
 
 const Navigation = () => {
   return (
@@ -23,7 +23,7 @@ const Navigation = () => {
               <span>For Buyer</span>
             </Link>
             <Link to="/buyer" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
-              <HeadphonesIcon className="h-5 w-5" />
+              <Building2 className="h-5 w-5" />
               <span>For Tenant</span>
             </Link>
           </div>
@@ -31,7 +31,7 @@ const Navigation = () => {
           {/* Right Section */}
           <div className="flex items-center space-x-2 ml-4">
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-              <Home className="h-5 w-5 text-gray-600" />
+              <UserCircle className="h-5 w-5 text-gray-600" />
             </div>
           </div>
         </div>
