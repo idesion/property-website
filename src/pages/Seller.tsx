@@ -1,3 +1,4 @@
+import React from "react";
 import { Users, Clock, Shield, Star, ClipboardList, Users2, Calendar, HandshakeIcon } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PropertyDetailsForm from "@/components/PropertyDetailsForm";
