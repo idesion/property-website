@@ -1,5 +1,5 @@
 import React from "react";
-import { Building2, Shield, Scale, Home } from "lucide-react";
+import { Building2, Shield, Scale } from "lucide-react";
 
 const BuyerHero = () => {
   return (
@@ -12,9 +12,6 @@ const BuyerHero = () => {
       }}
     >
       <div className="container mx-auto text-center max-w-4xl relative z-10  mr-10">
-        <div className="flex justify-center mb-6">
-          <Home className="w-16 h-16 text-[#222222]" strokeWidth={1.5} />
-        </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 ">
           Find Your Dream Home
         </h1>
