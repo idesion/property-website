@@ -41,7 +41,7 @@ const SearchFilters = () => {
             <SelectItem value="1m+">$1M+</SelectItem>
           </SelectContent>
         </Select>
-        <Button className="w-full bg-primary hover:bg-primary-dark">
+        <Button className="w-full bg-primary hover:bg-primary-dark text-white">
           Search Properties
         </Button>
       </div>

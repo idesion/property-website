@@ -8,21 +8,32 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-2">
-            <Home className="h-6 w-6 text-primary" />
-            <span className="font-display text-xl font-bold text-primary">Property 213</span>
+            <Home className="h-6 w-6 text-gray-600" />
+            <span className="font-display text-xl font-bold text-gray-600">
+              Property 213
+            </span>
           </Link>
 
           {/* Center Navigation */}
           <div className="flex items-center space-x-8">
-            <Link to="/seller" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
+            <Link
+              to="/seller"
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
+            >
               <Home className="h-5 w-5" />
               <span>For Seller</span>
             </Link>
-            <Link to="/buyer" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
+            <Link
+              to="/buyer"
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
+            >
               <Search className="h-5 w-5" />
               <span>For Buyer</span>
             </Link>
-            <Link to="/buyer" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
+            <Link
+              to="/buyer"
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
+            >
               <Building2 className="h-5 w-5" />
               <span>For Tenant</span>
             </Link>
