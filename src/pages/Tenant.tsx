@@ -37,24 +37,24 @@ const Tenant = () => {
 
   const faqs = [
     {
-      question: "How do I schedule a property viewing?",
+      question: "How do I apply for a rental property?",
       answer:
-        "You can schedule a viewing directly through our platform by clicking the 'Schedule Viewing' button on any property listing. Choose your preferred date and time, and we'll confirm with the seller.",
+        "You can apply for a rental property directly through our platform by clicking the 'Apply Now' button on any property listing. Fill out the application form and submit the required documents.",
     },
     {
-      question: "Are all properties verified?",
+      question: "Are pets allowed in the rental properties?",
       answer:
-        "Yes, all properties listed on our platform are verified by our team to ensure accuracy of information and prevent fraud.",
+        "Pet policies vary by property. You can find the pet policy details in the property listing or contact the landlord for more information.",
     },
     {
-      question: "What documents do I need to make an offer?",
+      question: "What is the process for renewing a lease?",
       answer:
-        "To make an offer, you'll need proof of funds or pre-approval letter, government-issued ID, and completed offer form. Our team will guide you through the process.",
+        "To renew a lease, contact your landlord or property manager at least 30 days before your lease expires. They will provide you with the necessary steps and paperwork.",
     },
     {
-      question: "How long does the renting process typically take?",
+      question: "How do I report maintenance issues?",
       answer:
-        "The timeline varies depending on various factors, but typically takes 1-2 weeks from application to move-in. Our platform helps streamline the process.",
+        "You can report maintenance issues through our platform by clicking the 'Report Issue' button on your tenant dashboard. Provide details of the issue, and our team will address it promptly.",
     },
   ];
 
