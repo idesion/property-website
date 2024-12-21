@@ -1,6 +1,7 @@
 import { Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { useNavigate } from "react-router-dom";
 
 interface PropertyListingCardProps {
   id: string;
@@ -15,6 +16,7 @@ interface PropertyListingCardProps {
 }
 
 const PropertyListingCard = ({
+  id,
   image,
   price,
   beds,
@@ -24,8 +26,17 @@ const PropertyListingCard = ({
   city,
   state,
 }: PropertyListingCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/properties/${id}`);
+  };
+
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <div 
+      onClick={handleClick}
+      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+    >
       <div className="relative">
         <img
           src={image}
@@ -36,6 +47,10 @@ const PropertyListingCard = ({
           variant="ghost"
           size="icon"
           className="absolute top-2 right-2 bg-white/80 hover:bg-white"
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent navigation when clicking the heart
+            // Add favorite logic here
+          }}
         >
           <Heart className="h-5 w-5" />
         </Button>
