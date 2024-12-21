@@ -196,25 +196,25 @@ const Seller = () => {
             <h4 className="text-4xl font-bold text-primary mb-2">
               {overallStats.totalTransactions}
             </h4>
-            <p className="text-gray-600">Transactions</p>
+            <p className="text-gray-600">annual transactions completed</p>
           </div>
           <div className="text-center">
             <h4 className="text-4xl font-bold text-primary mb-2">
               {overallStats.totalValue}
             </h4>
-            <p className="text-gray-600">Total Value</p>
+            <p className="text-gray-600">total property value transacted</p>
           </div>
           <div className="text-center">
             <h4 className="text-4xl font-bold text-primary mb-2">
               {overallStats.totalAgencies}
             </h4>
-            <p className="text-gray-600">Agencies</p>
+            <p className="text-gray-600">partnered agencies</p>
           </div>
           <div className="text-center">
             <h4 className="text-4xl font-bold text-primary mb-2">
               {overallStats.totalAgents}
             </h4>
-            <p className="text-gray-600">Agents</p>
+            <p className="text-gray-600">trusted agents</p>
           </div>
         </div>
 
@@ -240,7 +240,7 @@ const Seller = () => {
               Join thousands of satisfied sellers
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
             {reviews.map((review, index) => (
               <div
                 key={index}

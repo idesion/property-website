@@ -1,6 +1,7 @@
-import TenantHero from "@/components/TenantHero";
+import { useState } from "react";
+import TenantHero from "@/components/tenant/TenantHero";
+import TenantHowItWorks from "@/components/tenant/TenantHowItWorks";
 import Map from "@/components/Map";
-import TenantHowItWorks from "@/components/TenantHowItWorks";
 import SearchFilters from "@/components/SearchFilters";
 import {
   Accordion,
@@ -11,6 +12,12 @@ import {
 import { Star } from "lucide-react";
 
 const Tenant = () => {
+  const areas = [
+    { name: "Bukit Bintang", coordinates: { lat: 3.1466, lng: 101.6958 } },
+    { name: "KLCC", coordinates: { lat: 3.1579, lng: 101.7123 } },
+    { name: "Mont Kiara", coordinates: { lat: 3.1686, lng: 101.6509 } },
+  ];
+
   const reviews = [
     {
       name: "John Doe",
@@ -61,13 +68,8 @@ const Tenant = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <TenantHero />
-
-      <div className="container mx-auto py-5 px-4 pt-10">
-        <div className="mb-8">
-          <SearchFilters />
-        </div>
-      </div>
-
+      <SearchFilters />
+      <Map areas={areas} />
       <TenantHowItWorks />
 
       {/* Reviews Section */}
@@ -78,7 +80,7 @@ const Tenant = () => {
             Join thousands of satisfied tenants
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
           {reviews.map((review, index) => (
             <div
               key={index}

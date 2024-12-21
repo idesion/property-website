@@ -6,12 +6,11 @@ const TenantHero = () => {
     <div
       className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 min-h-[750px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed"
       style={{
-        backgroundImage:
-          "url('/lovable-uploads/47604c38-69ba-4b3d-bf27-8c57c22059d4.png')",
+        backgroundImage: "url('/tenant-background.png')",
         backgroundSize: "cover",
       }}
     >
-      <div className="container mx-auto text-center max-w-4xl relative z-10">
+      <div className="container mx-auto text-center max-w-4xl relative z-10 mr-10 text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Discover Your Ideal Rental Property
         </h1>

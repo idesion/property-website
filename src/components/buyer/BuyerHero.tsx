@@ -6,8 +6,7 @@ const BuyerHero = () => {
     <div
       className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 min-h-[750px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed"
       style={{
-        backgroundImage:
-          "url('/lovable-uploads/47604c38-69ba-4b3d-bf27-8c57c22059d4.png')",
+        backgroundImage: "url('/buyer-background.png')",
         backgroundSize: "cover",
       }}
     >

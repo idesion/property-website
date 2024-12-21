@@ -1,16 +1,17 @@
+import { useState } from "react";
 import SearchFilters from "@/components/SearchFilters";
 import Map from "@/components/Map";
-import BuyerHero from "@/components/BuyerHero";
-import BuyerHowItWorks from "@/components/BuyerHowItWorks";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Star } from "lucide-react";
-
+import BuyerHero from "@/components/buyer/BuyerHero";
+import BuyerHowItWorks from "@/components/buyer/BuyerHowItWorks";
+import BuyerReviews from "@/components/buyer/BuyerReviews";
+import BuyerFAQ from "@/components/buyer/BuyerFAQ";
 const Buyer = () => {
+  const areas = [
+    { name: "Bukit Bintang", coordinates: { lat: 3.1466, lng: 101.6958 } },
+    { name: "KLCC", coordinates: { lat: 3.1579, lng: 101.7123 } },
+    { name: "Mont Kiara", coordinates: { lat: 3.1686, lng: 101.6509 } },
+  ];
+
   const reviews = [
     {
       name: "Sarah Johnson",
@@ -61,74 +62,11 @@ const Buyer = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <BuyerHero />
-
-      <div className="container mx-auto py-5 px-4 pt-10">
-        <div className="mb-8">
-          <SearchFilters />
-        </div>
-      </div>
-
-      <div className="-mx-4">
-        <Map />
-      </div>
-
+      <SearchFilters />
+      <Map areas={areas} />
       <BuyerHowItWorks />
-
-      {/* Reviews Section */}
-      <div className="bg-secondary/20 py-20 px-4 -mx-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">What Our Buyers Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Join thousands of satisfied buyers
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-center mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-yellow-400 fill-current"
-                  />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-4">{review.content}</p>
-              <div>
-                <p className="font-semibold">{review.name}</p>
-                <p className="text-gray-500 text-sm">{review.role}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="container mx-auto py-20 px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about buying property
-          </p>
-        </div>
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-8">
-          <Accordion type="single" collapsible>
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
+      <BuyerReviews reviews={reviews} />
+      <BuyerFAQ faqs={faqs} />
     </div>
   );
 };
