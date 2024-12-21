@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Index from "./pages/Index";
 import Buyer from "./pages/Buyer";
 import Seller from "./pages/Seller";
+import Tenant from "./pages/Tenant";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/buyer" element={<Buyer />} />
           <Route path="/seller" element={<Seller />} />
+          <Route path="/tenant" element={<Tenant />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
