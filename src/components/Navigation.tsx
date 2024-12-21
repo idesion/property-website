@@ -31,7 +31,7 @@ const Navigation = () => {
               <span>For Buyer</span>
             </Link>
             <Link
-              to="/buyer"
+              to="/tenant"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
               <Building2 className="h-5 w-5" />

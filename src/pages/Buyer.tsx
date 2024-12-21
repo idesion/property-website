@@ -1,9 +1,7 @@
 import SearchFilters from "@/components/SearchFilters";
-import PropertyCard from "@/components/PropertyCard";
 import Map from "@/components/Map";
 import BuyerHero from "@/components/BuyerHero";
 import BuyerHowItWorks from "@/components/BuyerHowItWorks";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
   AccordionContent,
@@ -11,31 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Star } from "lucide-react";
-
-const SAMPLE_PROPERTIES = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
-    title: "Modern Waterfront Villa",
-    price: "$2,500,000",
-    location: "Miami Beach, FL",
-    beds: 4,
-    baths: 3,
-    sqft: 3200,
-    type: "For Sale" as const,
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-    title: "Luxury Downtown Apartment",
-    price: "$4,500/month",
-    location: "Manhattan, NY",
-    beds: 2,
-    baths: 2,
-    sqft: 1500,
-    type: "For Rent" as const,
-  },
-];
 
 const Buyer = () => {
   const reviews = [
