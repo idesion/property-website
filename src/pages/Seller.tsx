@@ -1,57 +1,46 @@
-import React from "react";
-import {
-  Users2,
-  Calendar,
-  HandshakeIcon,
-  ClipboardList,
-  Star,
-} from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import SellerDetailsForm from "@/components/seller/SellerDetailsForm";
+import SearchPanel from "@/components/SearchPanel";
+import Map from "@/components/Map";
 import SellerHero from "@/components/seller/SellerHero";
 import SellerHowItWorks from "@/components/seller/SellerHowItWorks";
 import SellerReview from "@/components/seller/SellerReview";
 import SellerFAQ from "@/components/seller/SellerFAQ";
-import AgentNetwork from "@/components/AgentNetwork";
 import Footer from "@/components/Footer";
 
 const Seller = () => {
-  const reviews = [
+  const areas = [
+    { name: "Bukit Bintang", coordinates: { lat: 3.1466, lng: 101.6958 } },
+    { name: "KLCC", coordinates: { lat: 3.1579, lng: 101.7123 } },
+    { name: "Mont Kiara", coordinates: { lat: 3.1686, lng: 101.6509 } },
+  ];
+
+  const sellerReviews = [
+    {
+      name: "John Smith",
+      role: "Property Owner",
+      content: "Sold my house in just 2 weeks! The process was seamless.",
+      rating: 5,
+    },
     {
       name: "Sarah Johnson",
-      role: "Property Seller",
-      content:
-        "Sold my house in just 3 weeks! The AI valuation was spot-on and the agent matching was perfect.",
+      role: "Home Seller",
+      content: "Great experience with the valuation and listing process.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
-      role: "Property Seller",
-      content:
-        "The privacy features are fantastic. No more spam calls, everything went through the platform.",
-      rating: 5,
-    },
-    {
-      name: "Emma Davis",
-      role: "Property Seller",
-      content:
-        "Very professional service. The instant valuation helped me price my property correctly from day one.",
+      name: "Michael Brown",
+      role: "Real Estate Investor",
+      content: "Professional service and excellent communication throughout.",
       rating: 4,
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#F0F4F4]">
+    <div className="min-h-screen bg-gray-50">
       <SellerHero />
-      <SellerDetailsForm />
+      <SearchPanel />
+      <Map areas={areas} />
       <SellerHowItWorks />
-      <AgentNetwork />
-      <SellerReview reviews={reviews} />
+      <SellerReview reviews={sellerReviews} />
       <SellerFAQ />
       <Footer />
     </div>
