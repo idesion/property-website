@@ -16,7 +16,8 @@ const PropertyDetails = () => {
   useEffect(() => {
     if (!mapContainer.current) return;
 
-    mapboxgl.accessToken = "pk.eyJ1IjoiaWRlc2lvbiIsImEiOiJjbHBtcmRodnAwYXIyMmlwZ296dnlwaGcxIn0.ad8RnHG4ygclJ_5QtixS6A";
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiaWRlc2lvbiIsImEiOiJjbHBtcmRodnAwYXIyMmlwZ296dnlwaGcxIn0.ad8RnHG4ygclJ_5QtixS6A";
 
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -58,26 +59,77 @@ const PropertyDetails = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="px-4 py-8">
+      <div className="relative h-[600px] mb-8">
+        <iframe
+          src="https://my.matterport.com/show?play=1&lang=en-US&m=oaMaJhTYLWP"
+          className="w-full h-full rounded-lg"
+        />
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-4 right-4 bg-white/80 hover:bg-white"
+        >
+          <Heart className="h-5 w-5" />
+        </Button>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-6">
           {/* Hero Image */}
-          <div className="relative h-[400px] rounded-lg overflow-hidden">
+          {/* <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
-              src="/lovable-uploads/74f9109c-50ea-4ce4-91d9-824231358b80.png"
+              src="/sample/property1.jpg"
               alt="Property"
               className="w-full h-full object-cover"
             />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-4 right-4 bg-white/80 hover:bg-white"
-            >
-              <Heart className="h-5 w-5" />
-            </Button>
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <img
+                src="/sample/property1.jpg"
+                alt="Property"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div ref={mapContainer} className="h-[300px] rounded-lg" />
           </div>
+          <div className="grid grid-cols-1 gap-4">
+            <img
+              src="/sample/property3.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+            <img
+              src="/sample/property4.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+            <img
+              src="/sample/property5.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+            <img
+              src="/sample/property6.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+            <img
+              src="/sample/property7.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+            <img
+              src="/sample/property8.jpg"
+              alt="Property"
+              className="w-full rounded-lg"
+            />
+          </div>
+        </div>
 
+        {/* Right Column - Similar Listings */}
+        <div className="space-y-6 lg:sticky lg:top-0 lg:self-start py-5 px-5 w-full h-[calc(100vh-4rem)] overflow-scroll">
           {/* Property Information */}
           <div>
             <div className="flex justify-between items-start">
@@ -90,7 +142,9 @@ const PropertyDetails = () => {
               </div>
               <div className="text-right">
                 <p className="text-3xl font-bold text-primary">$455,700</p>
-                <p className="text-sm text-muted-foreground">$2,395/month est.</p>
+                <p className="text-sm text-muted-foreground">
+                  $2,395/month est.
+                </p>
               </div>
             </div>
             <div className="flex gap-6 mt-4">
@@ -113,11 +167,9 @@ const PropertyDetails = () => {
           <Card className="p-6">
             <h2 className="text-xl font-semibold mb-4">Home details</h2>
             <p className="text-muted-foreground">
-              {isExpanded ? (
-                "Welcome to your dream property, where modern elegance meets comfort. The living room features a cozy fireplace and fresh interior paint in a neutral color scheme. The primary bedroom boasts a walk-in closet and ensuite bathroom. The kitchen comes with granite countertops and stainless steel appliances. The backyard offers a perfect space for outdoor entertainment."
-              ) : (
-                "Welcome to your dream property, where modern elegance meets comfort. The living room features a cozy fireplace and fresh interior paint in a neutral color scheme. The primary bedroom boasts a walk-in closet and..."
-              )}
+              {isExpanded
+                ? "Welcome to your dream property, where modern elegance meets comfort. The living room features a cozy fireplace and fresh interior paint in a neutral color scheme. The primary bedroom boasts a walk-in closet and ensuite bathroom. The kitchen comes with granite countertops and stainless steel appliances. The backyard offers a perfect space for outdoor entertainment."
+                : "Welcome to your dream property, where modern elegance meets comfort. The living room features a cozy fireplace and fresh interior paint in a neutral color scheme. The primary bedroom boasts a walk-in closet and..."}
             </p>
             <Button
               variant="ghost"
@@ -126,7 +178,7 @@ const PropertyDetails = () => {
             >
               {isExpanded ? "Read less" : "Read more"}
             </Button>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-4">
               <div>
                 <p className="text-muted-foreground">Home type</p>
@@ -146,16 +198,6 @@ const PropertyDetails = () => {
               </div>
             </div>
           </Card>
-
-          {/* Map */}
-          <Card className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Location</h2>
-            <div ref={mapContainer} className="h-[300px] rounded-lg" />
-          </Card>
-        </div>
-
-        {/* Right Column - Similar Listings */}
-        <div className="space-y-6">
           <h2 className="text-xl font-semibold">Similar listings</h2>
           <div className="space-y-4">
             {similarListings.map((property) => (
