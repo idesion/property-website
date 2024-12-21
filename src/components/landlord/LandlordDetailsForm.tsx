@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
-const PropertyDetailsForm = () => {
+const LandlordDetailsForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     propertyType: "",
@@ -28,9 +28,9 @@ const PropertyDetailsForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Valuation Request Received",
+      title: "Property for Rent Request Received",
       description:
-        "We'll analyze your property details and send you an estimate shortly.",
+        "We'll analyze your property details and our support will contact you shortly.",
     });
   };
 
@@ -38,7 +38,7 @@ const PropertyDetailsForm = () => {
     <div className="container mx-auto py-12 px-4">
       <div className="max-w-4xl mx-auto form-container">
         <h2 className="text-2xl font-bold mb-6">
-          Enter your details and get instant estimate valuation
+          Enter your details and get effortless property management
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,7 +172,7 @@ const PropertyDetailsForm = () => {
             type="submit"
             className="w-full bg-primary hover:bg-primary-dark text-white rounded-xl py-6"
           >
-            Get Instant Valuation
+            Get Started
           </Button>
         </form>
       </div>
@@ -180,4 +180,4 @@ const PropertyDetailsForm = () => {
   );
 };
 
-export default PropertyDetailsForm;
+export default LandlordDetailsForm;

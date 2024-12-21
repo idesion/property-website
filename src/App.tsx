@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Buyer from "./pages/Buyer";
 import Seller from "./pages/Seller";
 import Tenant from "./pages/Tenant";
+import Landlord from "./pages/Landlord";
 
 const queryClient = new QueryClient();
 
@@ -20,8 +21,9 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/buyer" element={<Buyer />} />
           <Route path="/seller" element={<Seller />} />
+          <Route path="/buyer" element={<Buyer />} />
+          <Route path="/landlord" element={<Landlord />} />
           <Route path="/tenant" element={<Tenant />} />
         </Routes>
       </BrowserRouter>

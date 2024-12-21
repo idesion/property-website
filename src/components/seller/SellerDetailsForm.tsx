@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
-const PropertyDetailsForm = () => {
+const SellerDetailsForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     propertyType: "",
@@ -180,4 +180,4 @@ const PropertyDetailsForm = () => {
   );
 };
 
-export default PropertyDetailsForm;
+export default SellerDetailsForm;

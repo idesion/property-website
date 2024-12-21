@@ -5,8 +5,15 @@ import SearchFilters from "@/components/SearchFilters";
 import Map from "@/components/Map";
 import { Building2, ShoppingCart, Building, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
+  const areas = [
+    { name: "Bukit Bintang", coordinates: { lat: 3.1466, lng: 101.6958 } },
+    { name: "KLCC", coordinates: { lat: 3.1579, lng: 101.7123 } },
+    { name: "Mont Kiara", coordinates: { lat: 3.1686, lng: 101.6509 } },
+  ];
+
   const overallStats = {
     totalTransactions: "51,700+",
     totalValue: "$15.5B",
@@ -66,15 +73,26 @@ const Index = () => {
           <p className="text-xl mb-8">
             Discover the perfect property from our curated selection
           </p>
-          <div className="max-w-4xl mx-auto">
-            <SearchFilters />
+          <div className="max-w-4xl mx-auto bg-white/10 p-4 rounded-lg shadow-md">
+            <Tabs defaultValue="buy">
+              <TabsList className="bg-transparent border-b-0">
+                <TabsTrigger value="buy">Buy</TabsTrigger>
+                <TabsTrigger value="rent">Rent</TabsTrigger>
+              </TabsList>
+              <TabsContent value="buy">
+                <SearchFilters />
+              </TabsContent>
+              <TabsContent value="rent">
+                <SearchFilters />
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </div>
-
+      <Map areas={areas} />
       <main className="container mx-auto py-12 px-4">
         {/* Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {/* For Seller Section */}
           <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 text-white relative overflow-hidden min-h-[300px] group hover:scale-[1.02] transition-transform">
             <div className="relative z-10">

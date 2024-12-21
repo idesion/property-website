@@ -57,7 +57,7 @@ const Map: React.FC<MapProps> = ({ areas }) => {
   return (
     <div>
       <div className="container mx-auto py-5 px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-5">
           <h2 className="text-3xl font-bold mb-4">
             Explore Our Coverage Areas
           </h2>
@@ -81,10 +81,8 @@ const Map: React.FC<MapProps> = ({ areas }) => {
           </div>
         </div>
       </div>
-      <div className="-mx-4">
-        <div className="map-container">
-          <div ref={mapContainer} className="w-full h-full" />
-        </div>
+      <div className="map-container">
+        <div ref={mapContainer} className="w-full h-full" />
       </div>
     </div>
   );

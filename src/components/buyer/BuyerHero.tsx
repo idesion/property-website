@@ -30,8 +30,10 @@ const BuyerHero = () => {
           </div>
           <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
             <Scale className="h-8 w-8 mb-4 mx-auto " />
-            <h3 className="font-bold text-xl mb-2 ">Free SPA Legal Fee</h3>
-            <p className="">No additional legal costs</p>
+            <h3 className="font-bold text-xl mb-2 ">
+              Complimentary Legal Services
+            </h3>
+            <p className="">Enjoy free legal services for your SPA</p>
           </div>
         </div>
       </div>
