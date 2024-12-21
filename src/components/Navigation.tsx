@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Home, Search, Building2, UserCircle } from "lucide-react";
+import {
+  Home,
+  Building,
+  Building2,
+  UserCircle,
+  ShoppingCart,
+  Users,
+} from "lucide-react";
 
 const Navigation = () => {
   return (
@@ -13,49 +20,34 @@ const Navigation = () => {
           </Link>
 
           {/* Center Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="flex items-center space-x-8">
             <Link
               to="/seller"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Home className="h-5 w-5" />
+              <Building2 className="h-5 w-5" />
               <span>For Seller</span>
             </Link>
             <Link
               to="/buyer"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Search className="h-5 w-5" />
+              <ShoppingCart className="h-5 w-5" />
               <span>For Buyer</span>
+            </Link>
+            <Link
+              to="/landlord"
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
+            >
+              <Building className="h-5 w-5" />
+              <span>For Landlord</span>
             </Link>
             <Link
               to="/tenant"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Building2 className="h-5 w-5" />
+              <Users className="h-5 w-5" />
               <span>For Tenant</span>
-            </Link>
-          </div>
-
-          {/* Mobile Navigation */}
-          <div className="flex md:hidden items-center space-x-4">
-            <Link
-              to="/seller"
-              className="text-gray-600 hover:text-primary transition-colors"
-            >
-              <Home className="h-5 w-5" />
-            </Link>
-            <Link
-              to="/buyer"
-              className="text-gray-600 hover:text-primary transition-colors"
-            >
-              <Search className="h-5 w-5" />
-            </Link>
-            <Link
-              to="/tenant"
-              className="text-gray-600 hover:text-primary transition-colors"
-            >
-              <Building2 className="h-5 w-5" />
             </Link>
           </div>
 

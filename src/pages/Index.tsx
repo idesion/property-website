@@ -56,21 +56,7 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container mx-auto py-12 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold mb-6">Featured Properties</h2>
-            <div className="grid gap-6">
-              {SAMPLE_PROPERTIES.map((property) => (
-                <PropertyCard key={property.id} {...property} />
-              ))}
-            </div>
-          </div>
-          <div className="sticky top-4 h-fit">
-            <Map />
-          </div>
-        </div>
-      </main>
+      <main className="container mx-auto py-12 px-4"></main>
     </div>
   );
 };
