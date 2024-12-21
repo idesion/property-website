@@ -61,8 +61,7 @@ const Index = () => {
       <div
         className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 min-h-[750px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed"
         style={{
-          background:
-            "linear-gradient(rgba(110, 110, 110, 0.5), rgba(110, 110, 110, 0.5)), url('/index-background.png')",
+          background: "url('/index-background.png')",
           backgroundSize: "cover",
         }}
       >
@@ -73,7 +72,7 @@ const Index = () => {
           <p className="text-xl mb-8">
             Discover the perfect property from our curated selection
           </p>
-          <div className="max-w-4xl mx-auto bg-white/10 p-4 rounded-lg shadow-md">
+          <div className="max-w-4xl mx-auto bg-white/50 p-4 rounded-lg shadow-md">
             <Tabs defaultValue="buy">
               <TabsList className="bg-transparent border-b-0">
                 <TabsTrigger value="buy">Buy</TabsTrigger>
