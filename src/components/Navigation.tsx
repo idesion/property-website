@@ -26,7 +26,7 @@ const Navigation = (): JSX.Element => {
 
   return (
     <nav className="bg-white border-b border-gray-100">
-      <div className="container mx-auto px-6">
+      <div className="px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-2">
@@ -40,28 +40,24 @@ const Navigation = (): JSX.Element => {
               to="/seller"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Building2 className="h-5 w-5" />
               <span>For Seller</span>
             </Link>
             <Link
               to="/buyer"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <ShoppingCart className="h-5 w-5" />
               <span>For Buyer</span>
             </Link>
             <Link
               to="/landlord"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Building className="h-5 w-5" />
               <span>For Landlord</span>
             </Link>
             <Link
               to="/tenant"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
             >
-              <Users className="h-5 w-5" />
               <span>For Tenant</span>
             </Link>
           </div>
@@ -95,7 +91,6 @@ const Navigation = (): JSX.Element => {
                 className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
-                <Building2 className="h-5 w-5" />
                 <span>For Seller</span>
               </Link>
               <Link
@@ -103,7 +98,6 @@ const Navigation = (): JSX.Element => {
                 className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
-                <ShoppingCart className="h-5 w-5" />
                 <span>For Buyer</span>
               </Link>
               <Link
@@ -111,7 +105,6 @@ const Navigation = (): JSX.Element => {
                 className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
-                <Building className="h-5 w-5" />
                 <span>For Landlord</span>
               </Link>
               <Link
@@ -119,7 +112,6 @@ const Navigation = (): JSX.Element => {
                 className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors"
                 onClick={toggleMenu}
               >
-                <Users className="h-5 w-5" />
                 <span>For Tenant</span>
               </Link>
             </nav>

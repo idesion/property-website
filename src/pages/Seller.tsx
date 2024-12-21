@@ -1,10 +1,10 @@
-import SearchPanel from "@/components/SearchPanel";
 import Map from "@/components/Map";
 import SellerHero from "@/components/seller/SellerHero";
 import SellerHowItWorks from "@/components/seller/SellerHowItWorks";
 import SellerReview from "@/components/seller/SellerReview";
 import SellerFAQ from "@/components/seller/SellerFAQ";
 import Footer from "@/components/Footer";
+import SellerDetailsForm from "@/components/seller/SellerDetailsForm";
 
 const Seller = () => {
   const areas = [
@@ -13,7 +13,7 @@ const Seller = () => {
     { name: "Mont Kiara", coordinates: { lat: 3.1686, lng: 101.6509 } },
   ];
 
-  const sellerReviews = [
+  const reviews = [
     {
       name: "John Smith",
       role: "Property Owner",
@@ -37,10 +37,10 @@ const Seller = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SellerHero />
-      <SearchPanel />
+      <SellerDetailsForm />
       <Map areas={areas} />
       <SellerHowItWorks />
-      <SellerReview reviews={sellerReviews} />
+      <SellerReview reviews={reviews} />
       <SellerFAQ />
       <Footer />
     </div>

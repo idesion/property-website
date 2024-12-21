@@ -36,7 +36,10 @@ const SearchFilters = () => {
           <SelectItem value="1m+">$1M+</SelectItem>
         </SelectContent>
       </Select>
-      <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+      <Button
+        className="w-full bg-primary hover:bg-primary-dark text-white"
+        onClick={() => (window.location.href = "/properties")}
+      >
         Search Properties
       </Button>
     </div>
