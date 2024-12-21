@@ -4,6 +4,7 @@ import TenantFAQ from "@/components/tenant/TenantFAQ";
 import TenantReviews from "@/components/tenant/TenantReviews";
 import Map from "@/components/Map";
 import SearchPanel from "@/components/SearchPanel";
+import Footer from "@/components/Footer";
 
 const Tenant = () => {
   const areas = [
@@ -44,6 +45,7 @@ const Tenant = () => {
       <TenantHowItWorks />
       <TenantReviews reviews={reviews} />
       <TenantFAQ />
+      <Footer />
     </div>
   );
 };

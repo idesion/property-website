@@ -5,6 +5,8 @@ import BuyerHero from "@/components/buyer/BuyerHero";
 import BuyerHowItWorks from "@/components/buyer/BuyerHowItWorks";
 import BuyerReviews from "@/components/buyer/BuyerReviews";
 import BuyerFAQ from "@/components/buyer/BuyerFAQ";
+import Footer from "@/components/Footer";
+
 const Buyer = () => {
   const areas = [
     { name: "Bukit Bintang", coordinates: { lat: 3.1466, lng: 101.6958 } },
@@ -44,6 +46,7 @@ const Buyer = () => {
       <BuyerHowItWorks />
       <BuyerReviews reviews={reviews} />
       <BuyerFAQ />
+      <Footer />
     </div>
   );
 };

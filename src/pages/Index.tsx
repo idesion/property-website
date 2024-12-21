@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropertyCard from "@/components/PropertyCard";
 import SearchFilters from "@/components/SearchFilters";
 import Map from "@/components/Map";
+import Footer from "@/components/Footer";
 import { Building2, ShoppingCart, Building, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -242,6 +243,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
