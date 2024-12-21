@@ -10,6 +10,7 @@ import Seller from "./pages/Seller";
 import Tenant from "./pages/Tenant";
 import Landlord from "./pages/Landlord";
 import PropertyListing from "./pages/PropertyListing";
+import PropertyDetails from "./pages/PropertyDetails";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/landlord" element={<Landlord />} />
           <Route path="/tenant" element={<Tenant />} />
           <Route path="/properties" element={<PropertyListing />} />
+          <Route path="/properties/:id" element={<PropertyDetails />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
