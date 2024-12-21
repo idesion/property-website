@@ -7,9 +7,58 @@ import { Building2, ShoppingCart, Building, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const overallStats = {
+    totalTransactions: "51,700+",
+    totalValue: "$15.5B",
+    totalAgencies: "130+",
+    totalAgents: "20,000+",
+  };
+
+  const agencyStats = [
+    {
+      name: "Century 21",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "RE/MAX",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Coldwell Banker",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Keller Williams",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Sotheby's",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Berkshire Hathaway",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "eXp Realty",
+      logo: "/placeholder.svg",
+    },
+    {
+      name: "Compass",
+      logo: "/placeholder.svg",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-primary text-white py-20 px-4">
+      <div
+        className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 min-h-[750px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed"
+        style={{
+          background:
+            "linear-gradient(rgba(110, 110, 110, 0.5), rgba(110, 110, 110, 0.5)), url('/index-background.png')",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Find Your Dream Home
@@ -21,19 +70,24 @@ const Index = () => {
             <SearchFilters />
           </div>
         </div>
-      </header>
+      </div>
 
       <main className="container mx-auto py-12 px-4">
         {/* Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* For Seller Section */}
-          <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 text-white relative overflow-hidden min-h-[400px] group hover:scale-[1.02] transition-transform">
+          <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 text-white relative overflow-hidden min-h-[300px] group hover:scale-[1.02] transition-transform">
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-2">For Seller</h2>
-              <p className="text-lg mb-6">List your property with confidence.</p>
+              <p className="text-lg mb-6">
+                List your property with confidence.
+              </p>
               <div className="flex gap-4">
                 <Link to="/seller">
-                  <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
+                  <Button
+                    variant="outline"
+                    className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                  >
                     Learn more
                   </Button>
                 </Link>
@@ -48,13 +102,16 @@ const Index = () => {
           </div>
 
           {/* For Buyer Section */}
-          <div className="bg-gradient-to-br from-accent to-accent-dark rounded-3xl p-8 text-white relative overflow-hidden min-h-[400px] group hover:scale-[1.02] transition-transform">
+          <div className="bg-gradient-to-br from-accent to-accent-dark rounded-3xl p-8 text-[#747474] relative overflow-hidden min-h-[300px] group hover:scale-[1.02] transition-transform">
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-2">For Buyer</h2>
               <p className="text-lg mb-6">Find your dream property.</p>
               <div className="flex gap-4">
                 <Link to="/buyer">
-                  <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
+                  <Button
+                    variant="outline"
+                    className="bg-white/10 hover:bg-white/20 border-white/20"
+                  >
                     Learn more
                   </Button>
                 </Link>
@@ -69,13 +126,16 @@ const Index = () => {
           </div>
 
           {/* For Landlord Section */}
-          <div className="bg-gradient-to-br from-secondary to-secondary-dark rounded-3xl p-8 text-white relative overflow-hidden min-h-[400px] group hover:scale-[1.02] transition-transform">
+          <div className="bg-gradient-to-br from-secondary to-secondary-dark rounded-3xl p-8 text-[#747474] relative overflow-hidden min-h-[300px] group hover:scale-[1.02] transition-transform">
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-2">For Landlord</h2>
               <p className="text-lg mb-6">Manage your rental properties.</p>
               <div className="flex gap-4">
                 <Link to="/landlord">
-                  <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
+                  <Button
+                    variant="outline"
+                    className="bg-white/10 hover:bg-white/20 text-[#747474] border-white/20"
+                  >
                     Learn more
                   </Button>
                 </Link>
@@ -90,13 +150,16 @@ const Index = () => {
           </div>
 
           {/* For Tenant Section */}
-          <div className="bg-gradient-to-br from-[#7AB9C5] to-[#5A99A5] rounded-3xl p-8 text-white relative overflow-hidden min-h-[400px] group hover:scale-[1.02] transition-transform">
+          <div className="bg-gradient-to-br from-[#7AB9C5] to-[#5A99A5] rounded-3xl p-8 text-white relative overflow-hidden min-h-[300px] group hover:scale-[1.02] transition-transform">
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-2">For Tenant</h2>
               <p className="text-lg mb-6">Find your perfect rental home.</p>
               <div className="flex gap-4">
                 <Link to="/tenant">
-                  <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
+                  <Button
+                    variant="outline"
+                    className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                  >
                     Learn more
                   </Button>
                 </Link>
@@ -111,6 +174,57 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Agency Network Section */}
+      <div className="bg-accent/20">
+        <div className="container mx-auto py-20 px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Agent Network</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Partner with the most successful real estate agencies in the
+              country
+            </p>
+          </div>
+          {/* Overall Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <h4 className="text-4xl font-bold text-primary mb-2">
+                {overallStats.totalTransactions}
+              </h4>
+              <p className="text-gray-600">annual transactions completed</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-4xl font-bold text-primary mb-2">
+                {overallStats.totalValue}
+              </h4>
+              <p className="text-gray-600">total property value transacted</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-4xl font-bold text-primary mb-2">
+                {overallStats.totalAgencies}
+              </h4>
+              <p className="text-gray-600">partnered agencies</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-4xl font-bold text-primary mb-2">
+                {overallStats.totalAgents}
+              </h4>
+              <p className="text-gray-600">trusted agents</p>
+            </div>
+          </div>
+          {/* Agency Logos */}
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {agencyStats.map((agency, index) => (
+              <img
+                key={index}
+                src={agency.logo}
+                alt={`${agency.name} logo`}
+                className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
