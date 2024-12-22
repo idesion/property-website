@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/landlord" element={<Landlord />} />
           <Route path="/tenant" element={<Tenant />} />
           <Route path="/properties" element={<PropertyListing />} />
+          <Route path="/properties/:id" element={<PropertyDetails />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
