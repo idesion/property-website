@@ -29,20 +29,16 @@ const PropertyListingCard = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/properties/${id}`);
+    navigate(`/listing/${id}`);
   };
 
   return (
-    <div 
+    <div
       onClick={handleClick}
       className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
     >
       <div className="relative">
-        <img
-          src={image}
-          alt={address}
-          className="w-full h-48 object-cover"
-        />
+        <img src={image} alt={address} className="w-full h-48 object-cover" />
         <Button
           variant="ghost"
           size="icon"
