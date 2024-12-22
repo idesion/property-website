@@ -38,7 +38,7 @@ const SearchFilters = () => {
       </Select>
       <Button
         className="w-full bg-primary hover:bg-primary-dark text-white"
-        onClick={() => (window.location.href = "/listing")}
+        onClick={() => (window.location.href = "/properties")}
       >
         Search Properties
       </Button>

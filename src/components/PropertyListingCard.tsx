@@ -29,7 +29,7 @@ const PropertyListingCard = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/listing/${id}`);
+    navigate(`/properties/${id}`);
   };
 
   return (
