@@ -161,6 +161,18 @@ const PropertyDetails = () => {
                 <span>3562 sqft</span>
               </div>
             </div>
+            <div className="flex gap-4 mt-4">
+              <Button variant="outline" className="w-full">
+                Request Viewing
+              </Button>
+              <Button variant="default" className="w-full">
+                Instant Booking
+              </Button>
+            </div>
+            <div className="bg-blue-100 text-blue-800 text-center py-2 rounded-lg mt-4 text-sm">
+              Book instantly and enjoy a 7-day free rental with a money-back
+              guarantee!
+            </div>
           </div>
 
           {/* Home Details */}
