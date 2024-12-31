@@ -87,7 +87,7 @@ const PropertyDetails = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <img
-                src="/sample/property1.jpg"
+                src="/sample/property1.webp"
                 alt="Property"
                 className="w-full h-full object-cover"
               />
@@ -96,32 +96,32 @@ const PropertyDetails = () => {
           </div>
           <div className="grid grid-cols-1 gap-4">
             <img
-              src="/sample/property3.jpg"
+              src="/sample/property3.webp"
               alt="Property"
               className="w-full rounded-lg"
             />
             <img
-              src="/sample/property4.jpg"
+              src="/sample/property4.webp"
               alt="Property"
               className="w-full rounded-lg"
             />
             <img
-              src="/sample/property5.jpg"
+              src="/sample/property5.webp"
               alt="Property"
               className="w-full rounded-lg"
             />
             <img
-              src="/sample/property6.jpg"
+              src="/sample/property6.webp"
               alt="Property"
               className="w-full rounded-lg"
             />
             <img
-              src="/sample/property7.jpg"
+              src="/sample/property7.webp"
               alt="Property"
               className="w-full rounded-lg"
             />
             <img
-              src="/sample/property8.jpg"
+              src="/sample/property8.webp"
               alt="Property"
               className="w-full rounded-lg"
             />

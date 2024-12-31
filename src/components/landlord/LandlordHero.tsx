@@ -10,7 +10,7 @@ const LandlordHero: React.FC = () => {
     <div
       className="relative bg-gradient-to-r from-primary/90 to-primary-light/90 py-20 px-4 min-h-[750px] before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed"
       style={{
-        backgroundImage: "url('/landlord-background.png')",
+        backgroundImage: "url('/landlord-background.webp')",
         backgroundSize: "cover",
       }}
     >
